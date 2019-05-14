@@ -1,5 +1,5 @@
 [Desktop Entry]
-Categories=X-MandrivaLinux-Multimedia-Video;AudioVideo;Video;
+Categories=AudioVideo;Video;AudioVideoEditing;
 Comment=Front-end for FFmpeg
 Exec=feff
 GenericName=feff
