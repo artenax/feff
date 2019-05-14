@@ -14,7 +14,7 @@ form1::form1(int argc,char** argv) :    QWidget(){
     move((desk.width() - width()) / 2, (desk.height() - height()) / 2);
 
     // date start 25.03.2011
-    this->setWindowTitle("FeFF  v1.10.0 (13.05.2019)");
+    this->setWindowTitle("FeFF  v1.10.1 (14.05.2019)");
     this->setWindowIcon(QIcon(":feff.ico"));
 
     QString pathConfig = "profiles.ini";

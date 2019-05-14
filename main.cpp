@@ -16,7 +16,7 @@ int main(int argc,char** argv) {
 
 
     if (translator.load(QString("feff_") + locale)==false){
-        translator.load(QString("/usr/share/feff/feff_") + locale);
+        translator.load(QString("/usr/share/feff/langs/feff_") + locale);
     }
     app.installTranslator(&translator);
 
