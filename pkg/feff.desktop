@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=X-MandrivaLinux-Multimedia-Video;AudioVideo;Video;
+Comment=Front-end for FFmpeg
+Exec=feff
+GenericName=feff
+Icon=feff
+Name=feff
+StartupNotify=true
+Terminal=false
+Type=Application
