@@ -7,7 +7,7 @@
 class formSave  : public QDialog {
     Q_OBJECT
     public:
-        formSave(QWidget *parent = 0);
+        explicit formSave(QWidget *parent = 0);
         QString getProfileName();
         void setProfileName(QString name);
 
