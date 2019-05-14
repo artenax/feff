@@ -2,9 +2,14 @@
 Categories=AudioVideo;Video;AudioVideoEditing;
 Comment=Front-end for FFmpeg
 Exec=feff
-GenericName=feff
+GenericName=GUI for FFmpeg
 Icon=feff
 Name=feff
 StartupNotify=true
 Terminal=false
 Type=Application
+
+# Translations
+Comment[ru]=Графический интерфейс для FFmpeg
+GenericName[ru]=ГУИ for FFmpeg
+
