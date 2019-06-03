@@ -587,6 +587,7 @@ void form1::Convert(){
     }
 
 
+    /*
     // подключение -map
     if (infoFFmpeg.getTypeCoder() == "ffmpeg"){
         if (ui.groupBox->isChecked()==true){
@@ -596,6 +597,7 @@ void form1::Convert(){
             arg << "-map" << ui.comboBox_10->currentText().mid(8,3);
         }
     }
+    */
 
     // format
     if (ui.comboBox_6->currentText() != "") arg << "-f" << ui.comboBox_6->currentText();
