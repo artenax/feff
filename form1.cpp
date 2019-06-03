@@ -549,15 +549,16 @@ void form1::Convert(){
     // Video
     if (ui.groupBox->isChecked()==true){
         if (ui.comboBox->currentData().toString() != "") arg << "-vcodec" << ui.comboBox->currentData().toString();
-        // -s size             set frame size (WxH or abbreviation)
-        if (ui.comboBox_2->currentText() != "") arg << "-s" << ui.comboBox_2->currentText();
-        // -vb bitrate         set bitrate (in bits/s)
-        if (ui.comboBox_3->currentText() != "") arg << "-vb" << IntToStr(ui.comboBox_3->currentText().toInt()*1000);
-        // -aspect aspect      set aspect ratio (4:3, 16:9 or 1.3333, 1.7777)
-        if (ui.comboBox_9->currentText() != "") arg << "-aspect" << ui.comboBox_9->currentText();
-        // -r rate             set frame rate (Hz value, fraction or abbreviation)
-        if (ui.comboBox_11->currentText() != "") arg << "-r" << ui.comboBox_11->currentText();
-
+        if (ui.comboBox->currentData().toString() != "copy"){
+            // -s size             set frame size (WxH or abbreviation)
+            if (ui.comboBox_2->currentText() != "") arg << "-s" << ui.comboBox_2->currentText();
+            // -vb bitrate         set bitrate (in bits/s)
+            if (ui.comboBox_3->currentText() != "") arg << "-vb" << IntToStr(ui.comboBox_3->currentText().toInt()*1000);
+            // -aspect aspect      set aspect ratio (4:3, 16:9 or 1.3333, 1.7777)
+            if (ui.comboBox_9->currentText() != "") arg << "-aspect" << ui.comboBox_9->currentText();
+            // -r rate             set frame rate (Hz value, fraction or abbreviation)
+            if (ui.comboBox_11->currentText() != "") arg << "-r" << ui.comboBox_11->currentText();
+        }
     }else{
         arg << "-vn";
     }
@@ -568,13 +569,16 @@ void form1::Convert(){
     if (ui.groupBox_2->isChecked()==true){
         // -acodec codec       force audio codec ('copy' to copy stream)
         if (ui.comboBox_5->currentData().toString() != "") arg << "-acodec" << ui.comboBox_5->currentData().toString();
-        // -ab                <int>   E..A. set bitrate (in bits/s)
-        if (ui.comboBox_4->currentText() != "") arg << "-ab" << DoubleToStr(ui.comboBox_4->currentText().toDouble()*1000);
-        // -ar rate            set audio sampling rate (in Hz)
-        if (ui.comboBox_8->currentText() != "") arg << "-ar" << ui.comboBox_8->currentText();
-        //-ac channels        set number of audio channels
-        if (ui.comboBox_12->currentText() != "") arg << "-ac" << ui.comboBox_12->itemData(ui.comboBox_12->currentIndex()).toString();
-        arg << "-vol" << ui.spinBox->text();
+
+        if (ui.comboBox_5->currentData().toString() != "copy"){
+            // -ab                <int>   E..A. set bitrate (in bits/s)
+            if (ui.comboBox_4->currentText() != "") arg << "-ab" << DoubleToStr(ui.comboBox_4->currentText().toDouble()*1000);
+            // -ar rate            set audio sampling rate (in Hz)
+            if (ui.comboBox_8->currentText() != "") arg << "-ar" << ui.comboBox_8->currentText();
+            //-ac channels        set number of audio channels
+            if (ui.comboBox_12->currentText() != "") arg << "-ac" << ui.comboBox_12->itemData(ui.comboBox_12->currentIndex()).toString();
+            arg << "-vol" << ui.spinBox->text();
+        }
     }else{
         arg << "-an";
     }
@@ -586,18 +590,6 @@ void form1::Convert(){
         arg << "-sn";
     }
 
-
-    /*
-    // подключение -map
-    if (infoFFmpeg.getTypeCoder() == "ffmpeg"){
-        if (ui.groupBox->isChecked()==true){
-            arg << "-map" << infoSource.streamVideo[1].number.mid(8,3);
-        }
-        if (ui.groupBox_2->isChecked()==true){
-            arg << "-map" << ui.comboBox_10->currentText().mid(8,3);
-        }
-    }
-    */
 
     // format
     if (ui.comboBox_6->currentText() != "") arg << "-f" << ui.comboBox_6->currentText();
