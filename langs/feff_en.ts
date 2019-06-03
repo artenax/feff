@@ -4,84 +4,85 @@
 <context>
     <name>form1</name>
     <message>
-        <location filename="../form1.cpp" line="243"/>
+        <location filename="../form1.cpp" line="244"/>
         <source>Video</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="244"/>
+        <location filename="../form1.cpp" line="245"/>
         <source>Audio</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="245"/>
+        <location filename="../form1.cpp" line="246"/>
         <source>Subtitle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="388"/>
+        <location filename="../form1.cpp" line="389"/>
         <source>Open FFmpeg</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="413"/>
-        <location filename="../form1.cpp" line="434"/>
+        <location filename="../form1.cpp" line="414"/>
+        <location filename="../form1.cpp" line="435"/>
         <source>All Files (*.*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="392"/>
-        <location filename="../form1.cpp" line="500"/>
-        <location filename="../form1.cpp" line="506"/>
-        <location filename="../form1.cpp" line="512"/>
-        <location filename="../form1.cpp" line="518"/>
-        <location filename="../form1.cpp" line="524"/>
-        <location filename="../form1.cpp" line="530"/>
+        <location filename="../form1.cpp" line="393"/>
+        <location filename="../form1.cpp" line="501"/>
+        <location filename="../form1.cpp" line="507"/>
+        <location filename="../form1.cpp" line="513"/>
+        <location filename="../form1.cpp" line="519"/>
+        <location filename="../form1.cpp" line="525"/>
+        <location filename="../form1.cpp" line="531"/>
         <source>ffmpeg</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="104"/>
+        <location filename="../form1.cpp" line="105"/>
         <source>1. COPYRIGHT, DISCLAIMER &lt;BR&gt;  (C) 1996-2019 AdmSasha &lt;dik@inbox.ru&gt; &lt;BR&gt;  This program is distributed in the hope that it will be useful,  but WITHOUT ANY WARRANTY; without even the implied warranty of   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.&lt;BR&gt;&lt;BR&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="111"/>
+        <location filename="../form1.cpp" line="112"/>
         <source>2. CONTACT&lt;BR&gt;  Please send bugreports to: &lt;a href=mailto://dik@inbox.ru&gt;dik@inbox.ru&lt;/a&gt;&lt;BR&gt;  Only bug reports with a reproducable bug are accepted.&lt;BR&gt;&lt;BR&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="116"/>
+        <location filename="../form1.cpp" line="117"/>
         <source>3. THANKS&lt;BR&gt;  Elbert Pol &lt;a href=mailto://elbert.pol@gmail.com&gt;elbert.pol@gmail.com&lt;/a&gt; &lt;BR&gt;  symbianflo &lt;a href=http://qt-apps.org/usermanager/search.php?username=symbianflo&gt;qt-apps.org&lt;/a&gt;&lt;BR&gt;&lt;BR&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="121"/>
+        <location filename="../form1.cpp" line="122"/>
         <source>4. LICENSE&lt;BR&gt;  The program is distributed under the GPLv3&lt;BR&gt;&lt;BR&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="388"/>
+        <location filename="../form1.cpp" line="389"/>
         <source>All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="392"/>
+        <location filename="../form1.cpp" line="393"/>
         <source>Incorrect path to ffmpeg or ffmpeg does not support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="413"/>
+        <location filename="../form1.cpp" line="414"/>
         <source>Open target</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="436"/>
+        <location filename="../form1.cpp" line="416"/>
+        <location filename="../form1.cpp" line="437"/>
         <source>reading source file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="434"/>
+        <location filename="../form1.cpp" line="435"/>
         <source>Open source file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -107,61 +108,100 @@
         <translation type="unfinished">AdmSasha &lt;dik@inbox.ru&gt;</translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="126"/>
+        <location filename="../form1.cpp" line="127"/>
         <source>5. DONATE &lt;BR&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="469"/>
-        <location filename="../form1.cpp" line="486"/>
+        <location filename="../form1.cpp" line="291"/>
+        <location filename="../form1.cpp" line="297"/>
+        <location filename="../form1.cpp" line="303"/>
+        <source>(none)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../form1.cpp" line="470"/>
+        <location filename="../form1.cpp" line="487"/>
         <source>Convert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="500"/>
+        <location filename="../form1.cpp" line="501"/>
         <source>Incorrect param for resolution</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="506"/>
-        <location filename="../form1.cpp" line="524"/>
+        <location filename="../form1.cpp" line="507"/>
+        <location filename="../form1.cpp" line="525"/>
         <source>Incorrect param for bitrate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="512"/>
+        <location filename="../form1.cpp" line="513"/>
         <source>Incorrect param for aspect ratio</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="518"/>
+        <location filename="../form1.cpp" line="519"/>
         <source>Incorrect param for frame rate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="530"/>
+        <location filename="../form1.cpp" line="531"/>
         <source>Incorrect param for sampling rate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="623"/>
+        <location filename="../form1.cpp" line="624"/>
         <source>Stop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="639"/>
+        <location filename="../form1.cpp" line="640"/>
         <source>Message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="679"/>
+        <location filename="../form1.cpp" line="680"/>
         <source>Conversion completed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../form1.cpp" line="680"/>
-        <location filename="../form1.cpp" line="687"/>
+        <location filename="../form1.cpp" line="681"/>
+        <location filename="../form1.cpp" line="688"/>
         <source>Again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../form1.cpp" line="705"/>
+        <location filename="../form1.cpp" line="706"/>
+        <location filename="../form1.cpp" line="707"/>
+        <source>copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../form1.cpp" line="840"/>
+        <source>Mono</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../form1.cpp" line="841"/>
+        <source>Stereo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../form1.cpp" line="851"/>
+        <source>Default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../form1.cpp" line="1043"/>
+        <source>delete profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../form1.cpp" line="1043"/>
+        <source>Are you sure you want to delete this profile ?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -247,11 +287,6 @@
 </context>
 <context>
     <name>formSave</name>
-    <message>
-        <location filename="../formSave.ui" line="14"/>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <location filename="../formSave.ui" line="33"/>
         <source>Profile name:</source>

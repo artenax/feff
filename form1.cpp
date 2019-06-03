@@ -288,19 +288,19 @@ int form1::setSource(QString fileName){
     if (count_video==0){
         QTreeWidgetItem *__tempItemV = new QTreeWidgetItem(itemVideo);
         ui.treeWidget->insertTopLevelItem(0,__tempItemV);
-        __tempItemV->setText(0,"(none)");
+        __tempItemV->setText(0,tr("(none)"));
         ui.groupBox->setChecked(0);
     }
     if (count_audio==0){
         QTreeWidgetItem *__tempItemA = new QTreeWidgetItem(itemAudio);
         ui.treeWidget->insertTopLevelItem(0,__tempItemA);
-        __tempItemA->setText(0,"(none)");
+        __tempItemA->setText(0,tr("(none)"));
         ui.groupBox_2->setChecked(0);
     }
     if (count_subtitle==0){
         QTreeWidgetItem *__tempItemS = new QTreeWidgetItem(itemSubtitle);
         ui.treeWidget->insertTopLevelItem(0,__tempItemS);
-        __tempItemS->setText(0,"(none)");
+        __tempItemS->setText(0,tr("(none)"));
         ui.groupBox_3->setChecked(0);
     }
 
@@ -413,7 +413,7 @@ void form1::openFFmpeg(){
 void form1::openTarget(){
     QString fileName = QFileDialog::getSaveFileName(this,tr("Open target"), "", tr("All Files (*.*)"));
     if (fileName.size() > 0){
-        formWait("reading source file",1);
+        formWait(tr("reading source file"),1);
 
         if (fileName.split(".").size()==1){
             if (infoSource.streamVideo[1].full!=""){
@@ -548,7 +548,7 @@ void form1::Convert(){
 
     // Video
     if (ui.groupBox->isChecked()==true){
-        if (ui.comboBox->currentText() != "") arg << "-vcodec" << ui.comboBox->currentText();
+        if (ui.comboBox->currentData().toString() != "") arg << "-vcodec" << ui.comboBox->currentData().toString();
         // -s size             set frame size (WxH or abbreviation)
         if (ui.comboBox_2->currentText() != "") arg << "-s" << ui.comboBox_2->currentText();
         // -vb bitrate         set bitrate (in bits/s)
@@ -567,7 +567,7 @@ void form1::Convert(){
     /////////////
     if (ui.groupBox_2->isChecked()==true){
         // -acodec codec       force audio codec ('copy' to copy stream)
-        if (ui.comboBox_5->currentText() != "") arg << "-acodec" << ui.comboBox_5->currentText();
+        if (ui.comboBox_5->currentData().toString() != "") arg << "-acodec" << ui.comboBox_5->currentData().toString();
         // -ab                <int>   E..A. set bitrate (in bits/s)
         if (ui.comboBox_4->currentText() != "") arg << "-ab" << DoubleToStr(ui.comboBox_4->currentText().toDouble()*1000);
         // -ar rate            set audio sampling rate (in Hz)
@@ -581,7 +581,7 @@ void form1::Convert(){
 
     // Subtitle
     if (ui.groupBox_3->isChecked()==true){
-        if (ui.comboBox_7->currentText() != "") arg << "-scodec" << ui.comboBox_7->currentText();
+        if (ui.comboBox_7->currentData().toString() != "") arg << "-scodec" << ui.comboBox_7->currentData().toString();
     }else{
         arg << "-sn";
     }
@@ -702,18 +702,18 @@ void form1::initFFmpegCodecs(){
     ui.comboBox_7->addItem("","");
 
     // копирование
-    ui.comboBox->addItem("copy","");
-    ui.comboBox_5->addItem("copy","");
-    ui.comboBox_7->addItem("copy","");
+    ui.comboBox->addItem(tr("copy"),"copy");
+    ui.comboBox_5->addItem(tr("copy"),"copy");
+    ui.comboBox_7->addItem(tr("copy"),"copy");
 
     // поддерживаемые
     QMapIterator<int, sInfoCodec> i(ffmpeg_codecs);
     while (i.hasNext()){
         i.next();
         if (i.value().encoding==true){
-            if (i.value().typeCodec==1)  ui.comboBox->addItem(i.value().name ,"");
-            if (i.value().typeCodec==2)  ui.comboBox_5->addItem(i.value().name ,"");
-            if (i.value().typeCodec==3)  ui.comboBox_7->addItem(i.value().name ,"");
+            if (i.value().typeCodec==1)  ui.comboBox->addItem(i.value().name ,i.value().name);
+            if (i.value().typeCodec==2)  ui.comboBox_5->addItem(i.value().name ,i.value().name);
+            if (i.value().typeCodec==3)  ui.comboBox_7->addItem(i.value().name ,i.value().name);
         }
     }
 
@@ -837,8 +837,8 @@ void form1::initFFmpegChannels(){
     ui.comboBox_12->clear();
 
     ui.comboBox_12->addItem("","");
-    ui.comboBox_12->addItem("Mono","1");
-    ui.comboBox_12->addItem("Sterio","2");
+    ui.comboBox_12->addItem(tr("Mono"),"1");
+    ui.comboBox_12->addItem(tr("Stereo"),"2");
     ui.comboBox_12->addItem("5.1","6");
 }
 
@@ -848,7 +848,7 @@ void form1::initProfiles(){
     QStringList groups = confProfiles->childGroups();
 
     ui.comboBox_13->clear();
-    ui.comboBox_13->addItem("Default","");
+    ui.comboBox_13->addItem(tr("Default"),"");
 
     for (int i=0;i<groups.size();i++){
         if (groups[i] != "Default"){
@@ -943,7 +943,7 @@ void form1::profile_changed(QString key){
     ////////////////////////////////////////////
     //////    AUDIO
     // Установка Codec
-    ind = ui.comboBox_5->findText(confProfiles->value(key+"/audio/codec/","").toString());
+    ind = ui.comboBox_5->findData(confProfiles->value(key+"/audio/codec/","").toString());
     if (ind != -1){
         ui.comboBox_5->setCurrentIndex(ind);
     }else{
@@ -983,11 +983,11 @@ void form1::profile_changed(QString key){
     ////////////////////////////////////////////
     //////    SUBTITLE
     // Установка Codec
-    ind = ui.comboBox_7->findText(confProfiles->value(key+"/subtitle/codec/","").toString());
+    ind = ui.comboBox_7->findData(confProfiles->value(key+"/subtitle/codec/","").toString());
     if (ind != -1){
         ui.comboBox_7->setCurrentIndex(ind);
     }else{
-        ui.comboBox_7->addItem(confProfiles->value(key+"/subtitle/codec/","").toString(),"");
+        ui.comboBox_7->addItem(confProfiles->value(key+"/subtitle/codec/","").toString(),confProfiles->value(key+"/subtitle/codec/","").toString());
         ui.comboBox_7->setCurrentIndex(0);
     }
 
@@ -1019,13 +1019,13 @@ void form1::profile_save(){
         confProfiles->setValue(profileName+"/video/AspectRatio", ui.comboBox_9->currentText());
         confProfiles->setValue(profileName+"/video/FrameRate", ui.comboBox_11->currentText());
         //
-        confProfiles->setValue(profileName+"/audio/codec", ui.comboBox_5->currentText());
+        confProfiles->setValue(profileName+"/audio/codec", ui.comboBox_5->currentData().toString());
         confProfiles->setValue(profileName+"/audio/Bitrate", ui.comboBox_4->currentText());
         confProfiles->setValue(profileName+"/audio/SamplingRate", ui.comboBox_8->currentText());
         confProfiles->setValue(profileName+"/audio/Channels", ui.comboBox_12->currentText());
         confProfiles->setValue(profileName+"/audio/volume", ui.spinBox->text());
         //
-        confProfiles->setValue(profileName+"/subtitle/codec", ui.comboBox_7->currentText());
+        confProfiles->setValue(profileName+"/subtitle/codec", ui.comboBox_7->currentData().toString());
         //
 
         //
@@ -1040,7 +1040,7 @@ void form1::profile_save(){
 void form1::profile_delete(){
     //   Удаление профайла
 
-    if (QMessageBox::question(this,"Удаление профайла","Вы уверены, что хотите удалить этот профиль ?",QMessageBox::Yes,QMessageBox::No)==QMessageBox::Yes){
+    if (QMessageBox::question(this,tr("delete profile"),tr("Are you sure you want to delete this profile ?"),QMessageBox::Yes,QMessageBox::No)==QMessageBox::Yes){
         confProfiles->remove(ui.comboBox_13->currentText());
         initProfiles();
     }
