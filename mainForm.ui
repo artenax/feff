@@ -14,7 +14,16 @@
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_6">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="topMargin">
+    <number>5</number>
+   </property>
+   <property name="rightMargin">
+    <number>5</number>
+   </property>
+   <property name="bottomMargin">
     <number>5</number>
    </property>
    <item row="4" column="2">
@@ -173,7 +182,7 @@
       </font>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string notr="true">TextLabel</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignBottom|Qt::AlignHCenter</set>

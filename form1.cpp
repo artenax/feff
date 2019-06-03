@@ -14,7 +14,7 @@ form1::form1(int argc,char** argv) :    QWidget(){
     move((desk.width() - width()) / 2, (desk.height() - height()) / 2);
 
     // date start 25.03.2011
-    this->setWindowTitle("FeFF  v1.10.1 (14.05.2019)");
+    this->setWindowTitle("FeFF  v1.11 (13.06.2019)");
     this->setWindowIcon(QIcon(":feff.ico"));
 
     QString pathConfig = "profiles.ini";
@@ -99,33 +99,34 @@ form1::form1(int argc,char** argv) :    QWidget(){
     // Feff is a Audio/Video converter for Linux using Qt4 as GUI and FFmpeg as backend.
 
 
+
     ui.textEdit_3->insertHtml(
         "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;\">\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"></p>"
+        +tr(
         "1. COPYRIGHT, DISCLAIMER <BR>"
         "  (C) 1996-2019 AdmSasha <dik@inbox.ru> <BR>"
         "  This program is distributed in the hope that it will be useful,"
         "  but WITHOUT ANY WARRANTY; without even the implied warranty of "
         "  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.<BR>"
         "<BR>"
-
+        )+tr(
         "2. CONTACT<BR>"
         "  Please send bugreports to: <a href=mailto://dik@inbox.ru>dik@inbox.ru</a><BR>"
         "  Only bug reports with a reproducable bug are accepted.<BR>"
         "<BR>"
-
+        )+tr(
         "3. THANKS<BR>"
         "  Elbert Pol <a href=mailto://elbert.pol@gmail.com>elbert.pol@gmail.com</a> <BR>"
         "  symbianflo <a href=http://qt-apps.org/usermanager/search.php?username=symbianflo>qt-apps.org</a><BR>"
         "<BR>"
-
+        )+tr(
         "4. LICENSE<BR>"
         "  The program is distributed under the GPLv3<BR>"
         "<BR>"
-
-        "5. DONATE <BR>"
+        )
+        +tr("5. DONATE <BR>")+
         " <a href=\"http://dansoft.krasnokamensk.ru/about.html\">http://dansoft.krasnokamensk.ru/about.html</a>"
         "<BR>"
-
         "</body></html>"
     );
 
