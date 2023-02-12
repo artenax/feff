@@ -14,4 +14,4 @@ On Windows you can use [QtCreator](https://download.qt.io/new_archive/qt/5.5/5.5
 # Downloads
 [Releases](https://github.com/artenax/feff/releases)
 
-![feff](https://user-images.githubusercontent.com/107228652/218304235-18dc352f-635b-46cd-bc31-0daedec1e17d.png)
+![feff](https://user-images.githubusercontent.com/107228652/218305222-7bbef2ec-f750-42e1-a77d-db1bb7fde9d4.png)
